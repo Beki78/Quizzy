@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  height: 100vh;
+}
 :root {
   --main--color: #8dccda;
   --text--color: #182228;
@@ -32,7 +34,7 @@
 
 .main {
   background-color: var(--main--color);
-  height: 97.5vh;
+  height: 100%;
 }
 .navBar {
   display: flex;
@@ -148,7 +150,7 @@ footer {
 footer p {
   text-align: center;
   font-family: monospace;
-  color: #6db2c9;
+  color: #fff;
   font-size: 1em;
 }
 

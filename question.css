@@ -31,10 +31,13 @@
   transition: all 4s;
   z-index: 10000;
 }
+body {
+  height: 100%;
+}
 
 .main {
   background-color: var(--main--color);
-  height: 97.5vh;
+  height: 100vh;
 }
 .navBar {
   display: flex;
@@ -104,7 +107,7 @@
   }
 }
 .left .header {
-  font-size: 1.5em;
+  font-size: 1.3em;
   color: var(--text--color);
   font-weight: lighter;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -125,7 +128,7 @@
 }
 .right {
   border: 1px solid var(--container--color);
-  padding: 2em;
+  padding: 1em;
   border-radius: 3em;
   background-color: var(--right--color);
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.176);
@@ -149,7 +152,7 @@
   border-radius: 3em;
   padding: 0.3em 15em 0.3em 0.9em;
   gap: 2em;
-  margin: 1.5em 0;
+  margin: 1em 0;
   background-color: var(--container--color);
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.527);
   cursor: pointer;
@@ -190,4 +193,29 @@ footer p {
   font-size: 1.3em;
   padding-top: 0.3em;
   padding-left: 0.5em;
+}
+.endScreen {
+  background-color: var(--right--color);
+  display: none;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 10em;
+  left: 25%;
+  border-radius: 4em;
+  opacity: 90%;
+  background-color: var(--container--color);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.527);
+}
+.endScreen p {
+  font-family: monospace;
+  font-size: 3em;
+  padding: 1.5em 0;
+  text-align: center;
+}
+.endScreen button {
+  width: 10em;
+  margin-left: 40%;
+  background-color: var(--button--color);
 }

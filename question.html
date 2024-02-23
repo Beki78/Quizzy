@@ -28,7 +28,7 @@
     </div>
     <div class="main">
       <nav class="navBar">
-        <div class="NavBarleft">
+        <div class="NavBarleft" id="back">
           <img src="assets/geography-map-svgrepo-com.svg" alt="" />
           <p class="header">Geography</p>
         </div>
@@ -37,35 +37,41 @@
       </nav>
       <main class="body">
         <div class="left">
-            <p class="paragraph">Question 6 of 10</p>
-            <p class="header">This app will test your skills (as well as your knowledge!) as you build out a fully functional quiz. We provide a local JSON file to help you practice working with JSON!</p>
+          <p class="paragraph">Question <span id="count">6</span> of <span id="questionLength">10</span></p>
+          <p class="header" id="question">
+            This app will test your skills (as well as your knowledge!) as you
+            build out a fully functional quiz. We provide a local JSON file to
+            help you practice working with JSON!
+          </p>
         </div>
         <div class="right">
           <div class="rightContainer">
-            <div class="topic">
+            <div class="topic" id="choose">
               <p class="letter">A</p>
-              <p class="topicP">Geography</p>
+              <p class="topicP" id="chooseA">Geography</p>
             </div>
-            <div class="topic">
+            <div class="topic" id="choose">
               <p class="letter">B</p>
-              <p class="topicP">Coding</p>
+              <p class="topicP" id="chooseB">Coding</p>
             </div>
-            <div class="topic">
+            <div class="topic" id="choose">
               <p class="letter">C</p>
-              <p class="topicP">English</p>
+              <p class="topicP" id="chooseC">English</p>
             </div>
-            <div class="topic">
+            <div class="topic" id="choose">
               <p class="letter">D</p>
-              <p class="topicP">Biology</p>
+              <p class="topicP" id="chooseD">Biology</p>
             </div>
-            <button>Submit answer</button>
+            <button id="submitButton">Submit answer</button>
           </div>
         </div>
       </main>
     </div>
-    <footer>
-      <p>© 2024 Bereket Getachew. All rights reserved.</p>
-    </footer>
+
+    <div class="endScreen" id="endScreen">
+      <p>4/<span id="resultLength">10</span></p>
+      <button id="restart">Restart</button>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
