@@ -17,6 +17,7 @@ const CategorySlice = createSlice({
     },
 
     fetchCategorySuccess: (state, action: PayloadAction<CategoryType[]>) => {
+      console.log("Reducer received categories:", action.payload); // Log the payload
       state.categories = action.payload;
       state.isLoading = false;
       state.error = null;
@@ -24,7 +25,7 @@ const CategorySlice = createSlice({
 
     fetchCategoryFailure: (state, action: PayloadAction<string>) => {
       state.isLoading = false;
-      state.error = action.payload; 
+      state.error = action.payload;
     },
   },
 });

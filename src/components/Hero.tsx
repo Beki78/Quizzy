@@ -7,46 +7,44 @@ import { useDispatch, useSelector } from "react-redux";
 
 const Hero = () => {
   const [showRandom, setShowRandom] = useState(false);
-  const [categoriess, setCategoriess] = useState<any[]>([]); // To store Trivia API categories
+  const [categoriess, setCategoriess] = useState<any[]>([]);
   const chooseCategoryAudio = useRef<HTMLAudioElement | null>(null);
   const randomAudio = useRef<HTMLAudioElement | null>(null);
   const { categories, isLoading } = useSelector(
     (state: RootState) => state.category
   );
   const dispatch = useDispatch();
+  
+
+
+
+
+
+
+
+
+
+  
 
   useEffect(() => {
     dispatch(fetchCategory());
   }, [dispatch]);
 
   useEffect(() => {
-    console.log("Fetched categories:", categories);
+    console.log("Fetched categoriess:", categories);
   }, [categories]);
-  // Fetch categories from the Trivia API
-  useEffect(() => {
-    const fetchCategories = async () => {
-      try {
-        const response = await fetch("https://opentdb.com/api_category.php");
-        const data = await response.json();
-        setCategoriess(data.trivia_categories); // Set categories from API
-      } catch (error) {
-        console.error("Error fetching categories:", error);
-      }
-    };
-    fetchCategories();
-  }, []);
 
   const playChooseCategoryAudio = () => {
     if (chooseCategoryAudio.current) {
       chooseCategoryAudio.current.play();
     }
+    setShowRandom(true); // Show the random component
   };
 
   const playRandomAudio = () => {
     if (randomAudio.current) {
       randomAudio.current.play();
     }
-    setShowRandom(true); // Show the random component
   };
 
   return (
@@ -73,7 +71,6 @@ const Hero = () => {
               href="#"
               onClick={playChooseCategoryAudio}
             >
-                
               Choose Category 📚
             </Link>
 
@@ -91,7 +88,11 @@ const Hero = () => {
             src="/audio/choose-category.mp3"
             preload="auto"
           />
-          <audio ref={randomAudio} src="/audio/random.mp3" preload="auto" />
+          <audio
+            ref={randomAudio}
+            src="/audio/choose-category.mp3"
+            preload="auto"
+          />
         </div>
 
         {/* Second Section */}

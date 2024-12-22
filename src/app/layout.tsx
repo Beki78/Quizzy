@@ -1,7 +1,7 @@
-"use client"; // This makes the component a Client Component
+"use client"; 
 import "./globals.css";
 import { Provider } from "react-redux";
-import store from "../store/store"; // Adjust the path to your store file
+import store from "../store/store"; 
 
 
 
